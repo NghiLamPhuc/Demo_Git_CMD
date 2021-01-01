@@ -1,7 +1,0 @@
-git init
-git remote add origin [link]
-git add [file] || . (all)
-git commit -m "string"
-git push origin master
-
-new
