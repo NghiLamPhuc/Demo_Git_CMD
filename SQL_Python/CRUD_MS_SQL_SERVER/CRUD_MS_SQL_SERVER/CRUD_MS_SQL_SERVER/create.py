@@ -6,22 +6,21 @@ class Create:
         # Get the sql connection
         connection = dbConn.getConnection()
                 
-        name = input('Enter Name = ')
-        age = input('Enter Age = ')
-
+        MACS = input('Nhap ma co so = ')
+        TENCS = input('Nhap ten co so = ')
+        DIACHI = input('Nhap dia chi = ')
+        
         try:
-           query = "Insert Into Employee(Name, Age) Values(?,?)" 
+           query = "INSERT INTO CoSo(MACS, TENCS, DIACHI) VALUES(?, ?, ?)" 
            cursor = connection.cursor()
-
-           # Execute the sql query
-           cursor.execute(query, [name, age])
+           cursor.execute(query, [MACS, TENCS, DIACHI])
 
            # Commit the data
            connection.commit()
            print('Data Saved Successfully')
 
         except:
-             print('Somethng worng, please check')
+             print('Something wrong, please check')
 
         finally:
            # Close the connection

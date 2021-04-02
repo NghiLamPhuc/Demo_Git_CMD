@@ -7,8 +7,7 @@ class Read:
         cursor = connection.cursor()
 
         # Execute the sql query
-        cursor.execute('Select * from KHACHHANG')
-        #cursor.execute('Select * from Employee')
+        cursor.execute('Select * from CoSo')
 
         # Print the data
         for row in cursor:

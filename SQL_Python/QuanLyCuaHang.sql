@@ -1,6 +1,39 @@
 --CREATE DATABASE QuanLyCuaHang;
 ----https://cafedev.vn/tu-hoc-sql-bai-tap-thuc-hanh-create-insert-update-xoa-du-lieu-trong-sql/
 USE QuanLyCuaHang
+--select * from KHACHHANG WHERE KHACHHANG.DCHI LIKE '%Q5%'
+--select HOTEN, SODT from KHACHHANG --where DOANHSO > 300000
+--select * from KHACHHANG where DCHI LIKE '%Q5%' OR DCHI LIKE '%Q1%'
+
+--select MASP from SANPHAM
+--except
+--select MASP from CTHD
+
+--select * from HOADON,KHACHHANG WHERE HOADON.MAKH = KHACHHANG.MAKH
+
+--select MASP from SANPHAM
+--intersect
+--select MASP from CTHD
+
+--SELECT * FROM SANPHAM
+--SELECT * FROM CTHD
+--select * from SANPHAM JOIN CTHD on SANPHAM.MASP = CTHD.MASP
+--select KHACHHANG.MAKH,KHACHHANG.HOTEN,SOHD from KHACHHANG right join HOADON on KHACHHANG.MAKH = HOADON.MAKH
+
+--select KHACHHANG.MAKH,KHACHHANG.HOTEN,SOHD
+--from KHACHHANG right join HOADON
+--on KHACHHANG.MAKH = HOADON.MAKH
+
+--select NHANVIEN.MANV, NHANVIEN.HOTEN, HOADON.SOHD from NHANVIEN left join HOADON
+--on NHANVIEN.MANV = HOADON.MANV
+
+--select * from NHANVIEN left join HOADON
+--on NHANVIEN.MANV = HOADON.MANV
+--where HOADON.SOHD is not null
+
+select NHANVIEN.MANV, NHANVIEN.HOTEN from NHANVIEN
+
+select HOADON.MANV from HOADON
 
 --CREATE TABLE KHACHHANG(
 --MAKH char(4) PRIMARY KEY,

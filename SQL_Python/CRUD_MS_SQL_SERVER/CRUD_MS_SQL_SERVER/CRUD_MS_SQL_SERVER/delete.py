@@ -6,16 +6,16 @@ class Delete:
         # Get the sql connection
         connection = dbConn.getConnection()
 
-        id = input('Enter Employee Id = ')
+        MACS = input('Nhap ma co so = ')
     
         try:
            # Get record which needs to be deleted
-           sql = "Select * From Employee Where Id = ?" 
+           sql = "Select * From CoSo Where MACS = ?" 
            cursor = connection.cursor()
-           cursor.execute(sql, [id])
+           cursor.execute(sql, [MACS])
            item = cursor.fetchone()
            print('Data Fetched for Id = ', id)
-           print('ID\t\t Name\t\t\t Age')
+           print('MACS\t\t TENCS\t\t\t DIACHI')
            print('-------------------------------------------')       
            print(' {}\t\t {} \t\t\t{} '.format(item[0], item[1], item[2]))
            print('-------------------------------------------')
@@ -23,8 +23,8 @@ class Delete:
 
            # Delete after confirmation
            if confirm == 'Y':
-               deleteQuery = "Delete From Employee Where Id = ?"
-               cursor.execute(deleteQuery,[id])
+               deleteQuery = "Delete From CoSo Where MACS = ?"
+               cursor.execute(deleteQuery,[MACS])
                connection.commit()
                print('Data deleted successfully!')
            else:
